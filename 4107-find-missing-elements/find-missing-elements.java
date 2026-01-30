@@ -9,6 +9,8 @@ class Solution {
             max = Math.max(max, num);
             set.add(num);
         }
+
+        
         
 
         List<Integer> list = new ArrayList<>();
