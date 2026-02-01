@@ -13,7 +13,7 @@ class Solution {
 
     public int[] rightSum(int[] a){
         int rs[] = new int[a.length]; 
-        Stack <Integer> stack = new Stack<>();
+        Deque <Integer> stack = new ArrayDeque<>();
 
         for(int i = 0 ; i < a.length ; i++){
             while(!stack.isEmpty() && a[stack.peek()] >= a[i]){
@@ -31,7 +31,7 @@ class Solution {
 
     public int[] leftSum(int[] a){
         int rs[] = new int[a.length]; 
-        Stack <Integer> stack = new Stack<>();
+        Deque <Integer> stack = new ArrayDeque<>();
 
         for(int i = a.length-1 ; i >= 0 ; i--){
             while(!stack.isEmpty() && a[stack.peek()] >= a[i]){
