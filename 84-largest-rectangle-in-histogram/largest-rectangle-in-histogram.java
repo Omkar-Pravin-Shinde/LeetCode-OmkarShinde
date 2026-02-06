@@ -4,7 +4,7 @@ class Solution {
         int left[] = new int[n];
         int right[] = new int[n];
         int max = 0;
-        Stack <Integer> stack = new Stack<>();
+        Deque <Integer> stack = new ArrayDeque<>();
 
         // Right Small
         for(int i = n-1 ; i >= 0 ; i--){
