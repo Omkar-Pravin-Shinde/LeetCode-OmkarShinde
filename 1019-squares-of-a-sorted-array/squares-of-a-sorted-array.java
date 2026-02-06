@@ -13,19 +13,29 @@ class Solution {
         int left = 0;
         int index = n - 1;
 
-        while(left <= right){
-            int rightsq = nums[right] * nums[right];
-            int leftsq = nums[left] * nums[left];
-
-            if(rightsq < leftsq){
-                res[index] = leftsq;
-                left++;
-            }else{
-                res[index] = rightsq;
+        for(int i = n - 1 ; i >= 0 ; i--){
+            if(Math.abs(nums[right]) > Math.abs(nums[left])){
+                res[i] = nums[right] * nums[right];
                 right--;
+            }else{
+                res[i] = nums[left] * nums[left];
+                left++;
             }
-            index--;
         }
         return res;
+        // while(left <= right){
+        //     int rightsq = nums[right] * nums[right];
+        //     int leftsq = nums[left] * nums[left];
+
+        //     if(rightsq < leftsq){
+        //         res[index] = leftsq;
+        //         left++;
+        //     }else{
+        //         res[index] = rightsq;
+        //         right--;
+        //     }
+        //     index--;
+        // }
+        // return res;
     }
 }
